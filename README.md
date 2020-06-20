@@ -69,6 +69,10 @@ Utiliser la technique de "nesting"
 
 Créer un _mixin_ pour des grids d'obstacles
 
-### Prizes
+**Nous allons apprendre** : la syntaxe et fonctionnement de "nesting" ainsi que comment nous faciliter la vie en réutilisans css via @mixins.
+
+### Footer
 
 Media queries dans sass
+
+**Nous allons apprendre** : qu'avec sass on peut aussi ajouter des media queries par selecteur.
