@@ -1,0 +1,8 @@
+@mixin responsive-grid($min-value-for-width, $gap-between-cells) {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calculate-rem($min-value-for-width), 1fr)
+  );
+  gap: $gap-between-cells;
+}

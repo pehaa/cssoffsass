@@ -5,12 +5,12 @@
   --blue: #80c1d6;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
 }
 
 img {
@@ -30,6 +30,11 @@ h2 {
   margin-top: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -44,10 +49,6 @@ button {
   letter-spacing: 2px;
 }
 
-header img {
-  display: inline-block;
-  margin: 6rem 0 3rem;
-}
 .wrap {
   margin: auto;
   max-width: 60rem;
@@ -64,6 +65,10 @@ header {
   text-align: center;
   display: flex;
   flex-direction: column;
+}
+header img {
+  display: inline-block;
+  margin: 6rem 0 3rem;
 }
 nav {
   position: fixed;
@@ -136,8 +141,6 @@ footer {
 }
 
 article ul {
-  display: grid;
-  grid-gap: 1.5rem;
   margin-bottom: 6rem;
 }
 
@@ -145,6 +148,8 @@ article ul {
   background: var(--orange);
 }
 .obstacles ul {
+  display: grid;
+  grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
@@ -267,6 +272,8 @@ footer h3 {
 
 @media (min-width: 30em) {
   .prizes ul {
+    display: grid;
+    grid-gap: 1.5rem;
     grid-template-columns: repeat(2, 1fr);
   }
   form,

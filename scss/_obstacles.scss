@@ -1,0 +1,29 @@
+.obstacles {
+  background: $orange;
+  ul {
+    @include responsive-grid(240px, 24px);
+  }
+  li {
+    padding: 1rem;
+    background: hsl(84, 52%, 46%);
+    text-align: center;
+    border-radius: 1.5rem;
+    transition: 0.4s;
+    &:hover {
+      background: $yellow;
+      color: $orange;
+    }
+  }
+  &-title {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  &-small-grid {
+    display: grid;
+    margin: 2rem 0;
+    @include responsive-grid(64px, 12px);
+    img {
+      border: 2px dashed;
+    }
+  }
+}
