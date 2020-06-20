@@ -2,6 +2,9 @@ footer {
   background: $yellow;
   color: $text-dark-color;
   position: relative;
+  h2 {
+    font-size: calculate-rem(48px);
+  }
   .wrap {
     display: grid;
     @media (min-width: 30em) {
@@ -21,18 +24,13 @@ footer {
   h2,
   h3 {
     text-align: center;
+    @media (min-width: 30em) {
+      grid-column: 1 / span 2;
+    }
   }
 }
 
 @media (min-width: 30em) {
-  footer .wrap {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem 2rem;
-  }
-  footer h2,
-  footer h3 {
-    grid-column: 1 / span 2;
-  }
   footer p:first-of-type,
   address:first-of-type {
     text-align: right;
