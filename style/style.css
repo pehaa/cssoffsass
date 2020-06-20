@@ -101,7 +101,7 @@ header {
   min-height: 100vh;
   background-image: url("../img/blue-splash.png");
   background-position: center center;
-  background-size: conver;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   text-align: center;
@@ -288,8 +288,6 @@ footer {
   background: var(--yellow);
   color: black;
   position: relative;
-  border-top: 0.5rem solid rgba(0, 0, 0, 0.06);
-  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.06);
 }
 
 footer h2 {
