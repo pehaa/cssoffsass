@@ -9,7 +9,9 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
-* {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -42,11 +44,14 @@ ul {
 }
 
 h1,
-h2,
-button {
-  text-align: center;
+h2 {
   font-family: Bangers, sans-serif;
   letter-spacing: 2px;
+}
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 
 .wrap {
@@ -54,6 +59,43 @@ button {
   max-width: 60rem;
   width: calc(100% - 3rem);
 }
+
+h2 {
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+article h2 {
+  font-size: 4rem;
+}
+article h2:after,
+article h1:after {
+  content: "";
+  height: 3rem;
+  margin-top: 2rem;
+  display: block;
+  background-image: linear-gradient(
+      to right,
+      var(--yellow) 50%,
+      transparent 50%
+    ),
+    linear-gradient(to right, var(--yellow) 50%, transparent 50%);
+  background-repeat: repeat-x;
+  background-size: 3rem 1.5rem;
+  background-position: left top, 1.5rem bottom;
+}
+
+article,
+footer {
+  border-top: 7px solid rgba(0, 0, 0, 0.06);
+  border-bottom: 7px solid rgba(0, 0, 0, 0.06);
+  padding: 4rem 0;
+}
+
+article ul {
+  margin-bottom: 6rem;
+}
+
+/* ---- HEADER ---- */
 
 header {
   min-height: 100vh;
@@ -66,6 +108,14 @@ header {
   display: flex;
   flex-direction: column;
 }
+
+h1 {
+  color: hsl(15, 92%, 59%);
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 white;
+  font-size: 10vmin;
+}
+
 header img {
   display: inline-block;
   margin: 6rem 0 3rem;
@@ -100,54 +150,13 @@ nav li:nth-child(even) a:hover {
   transform: scale(1.5) rotate(-5deg);
 }
 
-h1 {
-  color: hsl(15, 92%, 59%);
-  letter-spacing: 2px;
-  text-shadow: 1px 1px 0 white, 2px 2px 0 white;
-  font-size: 10vmin;
-}
-
-h2 {
-  font-size: 3rem;
-  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-}
-
-article h2,
-article h1 {
-  font-size: 4rem;
-}
-article h2:after,
-article h1:after {
-  content: "";
-  height: 3rem;
-  margin-top: 2rem;
-  display: block;
-  background-image: linear-gradient(
-      to right,
-      var(--yellow) 50%,
-      transparent 50%
-    ),
-    linear-gradient(to right, var(--yellow) 50%, transparent 50%);
-  background-repeat: repeat-x;
-  background-size: 3rem 1.5rem;
-  background-position: left top, 1.5rem bottom;
-}
-
-article,
-footer {
-  border-top: 7px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 7px solid rgba(0, 0, 0, 0.06);
-  padding: 4rem 0;
-}
-
-article ul {
-  margin-bottom: 6rem;
-}
+/* ---- OBSTACLES ---- */
 
 .obstacles {
   background: var(--orange);
 }
 .obstacles ul {
+  text-align: center;
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -155,8 +164,7 @@ article ul {
 
 .obstacles li {
   padding: 1rem;
-  background: hsl(84, 52%, 46%);
-  text-align: center;
+  background: var(--green);
   border-radius: 1.5rem;
   transition: 0.4s;
 }
@@ -165,13 +173,19 @@ article ul {
   background: var(--yellow);
   color: var(--orange);
 }
-.obstacle-title {
+.obstacles-title {
   font-size: 1.5rem;
   margin: 0;
 }
-.obstacle-title a {
+.obstacles-title a {
   text-decoration: none;
   color: inherit;
+}
+
+/* ---- PRIZES ---- */
+
+.prizes {
+  background: var(--green);
 }
 
 .prizes li {
@@ -191,9 +205,15 @@ article ul {
   transition: 1s;
 }
 
-.prizes {
-  background: var(--green);
+@media (min-width: 30em) {
+  .prizes ul {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* ---- FORM ---- */
 
 form {
   display: grid;
@@ -201,11 +221,6 @@ form {
 }
 input {
   font: inherit;
-}
-
-input[type="text"],
-input[type="email"] {
-  display: block;
   width: 100%;
   padding: 1rem;
   background: var(--orange);
@@ -227,6 +242,8 @@ input:focus {
 }
 
 button {
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
   display: inline-block;
   height: 10rem;
   margin: auto;
@@ -246,6 +263,18 @@ button:focus {
   transform: scale(1.5);
 }
 
+@media (min-width: 30em) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+  }
+  button {
+    grid-column: 1 / span 2;
+  }
+}
+
+/* ---- FOOTER ---- */
+
 footer {
   background: var(--yellow);
   color: black;
@@ -254,9 +283,10 @@ footer {
   border-bottom: 0.5rem solid rgba(0, 0, 0, 0.06);
 }
 
-footer .wrap {
-  display: grid;
+footer h2 {
+  font-size: 3rem;
 }
+
 footer img {
   position: absolute;
   transform: translate3d(0, -60%, 0);
@@ -265,23 +295,16 @@ footer img {
   right: 0;
   margin: auto;
 }
-footer h2,
-footer h3 {
-  text-align: center;
+
+footer .wrap {
+  display: grid;
 }
 
 @media (min-width: 30em) {
-  .prizes ul {
-    display: grid;
-    grid-gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  form,
   footer .wrap {
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
   }
-  form button,
   footer h2,
   footer h3 {
     grid-column: 1 / span 2;
