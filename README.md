@@ -15,6 +15,8 @@
 
 Nous allons profiter de faqs pour ceci - [_How to config the settings in my project?_](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html)
 
+**TO DO 👉** Configurer votre sass compiler
+
 ---
 
 ### Partials
