@@ -7,7 +7,7 @@
 - nous allons installer et utiliser l'extention **Live Sass Compliler**
 - nous allons configurer **Live Sass Compliler**
 
-### Lien super utiles : [SassMeister - online compiler]()
+**Lien super utile** : [SassMeister - online compiler]()
 
 ## To do Step by Step
 
