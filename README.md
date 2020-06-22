@@ -2,18 +2,22 @@
 
 ## Setup
 
-- IDE: Visual Studio Code
+- IDE: **Visual Studio Code**
 - nous allons installer et utiliser l'extension **Live Server**
 - nous allons installer et utiliser l'extention **Live Sass Compliler**
-- nous allons [configurer](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html) **Live Sass Compliler**
+- nous allons configurer **Live Sass Compliler**
 
 ## To do Step by Step
 
 ### Configurer **Live Sass Compliler**
+Nous allons profiter de faqs pour ceci - [*How to config the settings in my project?*](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html)
 
 ### Partials
 
-Incluer les fichiers "partials" dans `style.scss` respectons l'ordre.
+Nous allons profiter de la simplicité des "partials". Notre code css va être diviser en plusieurs parties (partials) et assemblé dans style.scss.
+
+
+Les fichiers "patials" qui sont uniquement destinés à être importés, et non compilés seuls, commencent par _. Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes. Vous pouvez laisser le _ lorsque vous importez un partiel.
 
 - normalize
 - settings
