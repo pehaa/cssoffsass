@@ -19,9 +19,9 @@ Nous allons profiter de faqs pour ceci - [_How to config the settings in my proj
 
 ---
 
-### Partials
+## Partials
 
-**Nous allons apprendre** : qu'on peut diviser stylesheet en petit morceaux, et comments les assembler ensemble.
+**Nous allons apprendre** qu'on peut diviser stylesheet en petit morceaux, et comments les assembler ensemble.
 
 Nous allons profiter de la simplicité des "partials". Notre code css va être diviser en plusieurs parties (partials) et assemblé dans style.scss.
 
@@ -64,7 +64,7 @@ Vous pouvez laisser le "\_" lorsque vous importez un partiel.
 
 ---
 
-### Output CSS
+## Output CSS
 
 Sass compiler (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans des fichiers .scss
 
@@ -98,7 +98,7 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 ---
 
-### Normalize
+## Normalize
 
 **Nous allons apprendre** qu'on peut utiliser pur css dans un fichier .scss.
 
@@ -106,9 +106,9 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 ---
 
-### Base
+## Base
 
-**Nous allons apprendre** : comment utiliser des variables sass.
+**Nous allons apprendre** comment utiliser des variables sass.
 
 **TO DO 👉** Mettre en place tous les styles de base, qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
 
@@ -139,9 +139,9 @@ h1 {
 
 ---
 
-### Functions
+## Functions
 
-**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
+**Nous allons apprendre** comment nous faciliter la vie avec des fonctions.
 
 ```css
 /* scss */
@@ -154,9 +154,9 @@ h1 {
 
 ---
 
-### Header
+## Header
 
-**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions se sass.
+**Nous allons apprendre** comment nous faciliter la vie avec des fonctions se sass.
 
 Sass vient avec un nombre de fonctions déjà prédéfinies, y compris quelques fonctions qui permettent de modifier des couleurs.
 
@@ -187,9 +187,9 @@ header {
 
 ---
 
-### Obstacles
+## Obstacles
 
-**Nous allons apprendre** : la syntaxe et fonctionnement de "nesting" ainsi que comment nous faciliter la vie en réutilisans css via @mixins.
+**Nous allons apprendre** la syntaxe et fonctionnement de "nesting"
 
 Voici comment fonctionne nesting (regardez bien la disposition des accolades dans le code ci-dessous).
 
@@ -228,6 +228,12 @@ nav a:hover {
   color: green;
 }
 ```
+
+**TO DO 👉** Utiliser la technique de "nesting"
+
+## Mixins
+
+**Nous allons apprendre** comment nous faciliter la vie en réutilisans css via @mixins.
 
 On peur imaginer mixins comme des snippets de css qu'on peut utiliser dans plusieurs endroits.
 
@@ -272,12 +278,11 @@ section .promo {
 }
 ```
 
-**TO DO 👉** Utiliser la technique de "nesting"  
 **TO DO 👉** Créer un _mixin_ pour des grids d'obstacles
 
-### Footer - Media queries dans sass
+## Footer - Media queries dans sass
 
-**Nous allons apprendre** : qu'avec sass on peut aussi ajouter des media queries par selecteur.
+**Nous allons apprendre** qu'avec sass on peut aussi ajouter des media queries par selecteur.
 
 ```scss
 // .scss - ex.
