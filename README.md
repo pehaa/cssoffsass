@@ -67,6 +67,22 @@ Utiliser la fonction (built-in) `transparentize`
 
 Utiliser la technique de "nesting"
 
+```
+// .scss - ex.
+nav {
+  height: 3rem;
+  ul {
+    display: flex;
+  }
+  a {
+    color: red;
+    &:hover {
+      color: green;
+    }
+  }
+}
+```
+
 Créer un _mixin_ pour des grids d'obstacles
 
 **Nous allons apprendre** : la syntaxe et fonctionnement de "nesting" ainsi que comment nous faciliter la vie en réutilisans css via @mixins.
@@ -74,5 +90,15 @@ Créer un _mixin_ pour des grids d'obstacles
 ### Footer
 
 Media queries dans sass
+
+```
+// .scss - ex.
+.container {
+  width: 80%;
+  @media (min-width:40em) {
+    width: 50%;
+  }
+}
+```
 
 **Nous allons apprendre** : qu'avec sass on peut aussi ajouter des media queries par selecteur.
