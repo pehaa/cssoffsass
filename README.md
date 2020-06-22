@@ -13,7 +13,11 @@
 
 Nous allons profiter de faqs pour ceci - [_How to config the settings in my project?_](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html)
 
+---
+
 ### Partials
+
+**Nous allons apprendre** : qu'on peut diviser stylesheet en petit morceaux, et comments les assembler ensemble.
 
 Nous allons profiter de la simplicité des "partials". Notre code css va être diviser en plusieurs parties (partials) et assemblé dans style.scss.
 
@@ -32,7 +36,16 @@ Nous allons profiter de la simplicité des "partials". Notre code css va être d
 │   └── style.scss
 ```
 
-Les fichiers "patials" qui sont uniquement destinés à être importés, et non compilés seuls, commencent par \_. Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes.
+Les fichiers "patials" qui sont uniquement destinés à être importés, et non compilés seuls, commencent par "\_". Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes.
+
+Vous pouvez laisser le "\_" lorsque vous importez un partiel.
+
+```css
+// ex.
+@import "normalize";
+```
+
+** TO DO ** Inclure les fichier partials dans `style.scss` en respectons l'ordre comme ceci
 
 - normalize
 - settings
@@ -45,18 +58,11 @@ Les fichiers "patials" qui sont uniquement destinés à être importés, et non 
 - form
 - footer
 
-Vous pouvez laisser le \_ lorsque vous importez un partiel.
-
-```css
-// ex.
-@import "normalize";
-```
-
-**Nous allons apprendre** : qu'on peut diviser stylesheet en petit morceaux, et comments les assembler ensemble.
+---
 
 ### Output CSS
 
-Lier le fichier `.css` compilé dans le fichier `index.html`
+** TO DO ** Lier le fichier `.css` compilé dans le fichier `index.html`
 
 Sass compiler (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans des fichiers .scss
 
@@ -86,25 +92,31 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Attention** Est-ce déjà clai que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichier .css. Nous n'y touchons plus.
 
+---
+
 ### Normalize
 
-Inclure normalize dans `scss/_normalize.scss`
+**Nous allons apprendre** qu'on peut utiliser pur css dans un fichier .scss.
 
-**Nous allons apprendre** : on peut utiliser pur css dans un fichier .scss.
+** TO DO ** Inclure normalize dans `scss/_normalize.scss`
+
+---
 
 ### Base
 
-Mettre en place tous les styles de base, qui concernent tout le document.
+**Nous allons apprendre** : comment utiliser des variables sass.
 
-Utiliser les variables sass définiés dans `scss/_settings.scss`
-
-**Nous allons apprendre** : utiliser des variables.
+** TO DO ** Mettre en place tous les styles de base, qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
 
 ** Exemple **
 
+---
+
 ### Functions
 
-Mettre en place une fonction qui convertit pixels en rems.
+**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
+
+** TO DO ** Mettre en place une fonction qui convertit pixels en rems.
 
 ```sass
 @function function-name($parameter1, $parameter2) {
@@ -112,15 +124,19 @@ Mettre en place une fonction qui convertit pixels en rems.
 }
 ```
 
-**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
+---
 
 ### Header
 
-Utiliser la fonction (built-in) `transparentize`
+**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions se sass.
 
-**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
+** TO DO ** Utiliser la fonction (built-in) `transparentize`
+
+---
 
 ### Obstacles
+
+**Nous allons apprendre** : la syntaxe et fonctionnement de "nesting" ainsi que comment nous faciliter la vie en réutilisans css via @mixins.
 
 Utiliser la technique de "nesting"
 
@@ -142,7 +158,13 @@ nav {
 
 Créer un _mixin_ pour des grids d'obstacles
 
-**Nous allons apprendre** : la syntaxe et fonctionnement de "nesting" ainsi que comment nous faciliter la vie en réutilisans css via @mixins.
+```sass
+@mixin mixin-name($parameter1, $parameter2) {
+  ....
+}
+```
+
+---
 
 ### Footer
 
