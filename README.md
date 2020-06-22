@@ -74,11 +74,17 @@ L'arborescence dépend de not réglages (fichier .vscode/settings.json).
 
 Les fichiers .map permettent aux DevTools de navigateur (ceux que nous activons via "Inspecter Elément") de faire le lien entre le code étant exécuté et les fichiers sources originaux.
 
-Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navigateur va les chercher et trouver lui même grâce à
+Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navigateur va les chercher et trouver lui même grâce à la dernière ligne dans les fichier .css générés
+
+```css
+/*# sourceMappingURL=style.min.css.map */
+```
 
 ```html
 <link rel="stylesheet" href="dist/css/style.min.css" />
 ```
+
+**Attention** Est-ce déjà clai que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichier .css. Nous n'y touchons plus.
 
 ### Normalize
 
@@ -94,9 +100,17 @@ Utiliser les variables sass définiés dans `scss/_settings.scss`
 
 **Nous allons apprendre** : utiliser des variables.
 
+** Exemple **
+
 ### Functions
 
 Mettre en place une fonction qui convertit pixels en rems.
+
+```sass
+@function function-name($parameter1, $parameter2) {
+  @return ....
+}
+```
 
 **Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
 
