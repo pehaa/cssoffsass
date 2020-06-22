@@ -45,7 +45,7 @@ Vous pouvez laisser le "\_" lorsque vous importez un partiel.
 @import "normalize";
 ```
 
-**TO DO** Inclure les fichier partials dans `style.scss` en respectons l'ordre comme ceci
+**TO DO 👉** Inclure les fichier partials dans `style.scss` en respectons l'ordre comme ceci
 
 - normalize
 - settings
@@ -61,8 +61,6 @@ Vous pouvez laisser le "\_" lorsque vous importez un partiel.
 ---
 
 ### Output CSS
-
-**TO DO** Lier le fichier `.css` compilé dans le fichier `index.html`
 
 Sass compiler (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans des fichiers .scss
 
@@ -92,13 +90,15 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Attention** Est-ce déjà clai que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichier .css. Nous n'y touchons plus.
 
+**TO DO 👉** Lier le fichier `.css` compilé dans le fichier `index.html`
+
 ---
 
 ### Normalize
 
 **Nous allons apprendre** qu'on peut utiliser pur css dans un fichier .scss.
 
-**TO DO** Inclure normalize dans `scss/_normalize.scss`
+**TO DO 👉** Inclure normalize dans `scss/_normalize.scss`
 
 ---
 
@@ -106,7 +106,7 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Nous allons apprendre** : comment utiliser des variables sass.
 
-**TO DO** Mettre en place tous les styles de base, qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
+**TO DO 👉** Mettre en place tous les styles de base, qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
 
 ** Exemple **
 
@@ -116,7 +116,7 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
 
-**TO DO** Mettre en place une fonction qui convertit pixels en rems.
+**TO DO 👉** Mettre en place une fonction qui convertit pixels en rems.
 
 ```sass
 @function function-name($parameter1, $parameter2) {
@@ -130,7 +130,7 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Nous allons apprendre** : comment nous faciliter la vie avec des fonctions se sass.
 
-**TO DO** Utiliser la fonction (built-in) `transparentize`
+**TO DO 👉** Utiliser la fonction (built-in) `transparentize`
 
 ---
 
