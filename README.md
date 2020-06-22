@@ -7,6 +7,8 @@
 - nous allons installer et utiliser l'extention **Live Sass Compliler**
 - nous allons configurer **Live Sass Compliler**
 
+### Lien super utiles : [SassMeister - online compiler]()
+
 ## To do Step by Step
 
 ### Configurer **Live Sass Compliler**
@@ -116,13 +118,13 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
 
-**TO DO 👉** Mettre en place une fonction qui convertit pixels en rems.
-
-```sass
+```scss
 @function function-name($parameter1, $parameter2) {
-  @return ....
+  @return ....;
 }
 ```
+
+**TO DO 👉** Mettre en place une fonction qui convertit pixels en rems.
 
 ---
 
@@ -138,9 +140,11 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Nous allons apprendre** : la syntaxe et fonctionnement de "nesting" ainsi que comment nous faciliter la vie en réutilisans css via @mixins.
 
-Utiliser la technique de "nesting"
+Voici comment fonctionne nesting (regardez bien la disposition des accolades dans le code ci-dessous).
 
-```
+Ce code en scss...
+
+```scss
 // .scss - ex.
 nav {
   height: 3rem;
@@ -156,7 +160,24 @@ nav {
 }
 ```
 
-Créer un _mixin_ pour des grids d'obstacles
+...donne ceci, une fois compilé :
+
+```css
+nav {
+  height: 3rem;
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  color: red;
+}
+nav a:hover {
+  color: green;
+}
+```
+
+On peur imaginer mixins comme des snippets de css qu'on peut utiliser dans plusieurs endroits.
 
 ```sass
 @mixin mixin-name($parameter1, $parameter2) {
@@ -164,20 +185,21 @@ Créer un _mixin_ pour des grids d'obstacles
 }
 ```
 
----
+**TO DO 👉** Utiliser la technique de "nesting"  
+**TO DO 👉** Créer un _mixin_ pour des grids d'obstacles
 
-### Footer
+### Footer - Media queries dans sass
 
-Media queries dans sass
+**Nous allons apprendre** : qu'avec sass on peut aussi ajouter des media queries par selecteur.
 
-```
+```scss
 // .scss - ex.
 .container {
   width: 80%;
-  @media (min-width:40em) {
+  @media (min-width: 40em) {
     width: 50%;
   }
 }
 ```
 
-**Nous allons apprendre** : qu'avec sass on peut aussi ajouter des media queries par selecteur.
+**TO DO 👉** Essayer vous-mêmes cette façon de mettre en place media queries.
