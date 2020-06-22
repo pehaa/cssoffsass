@@ -58,6 +58,28 @@ Vous pouvez laisser le \_ lorsque vous importez un partiel.
 
 Lier le fichier `.css` compilé dans le fichier `index.html`
 
+Sass compiler (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans des fichiers .scss
+
+L'arborescence dépend de not réglages (fichier .vscode/settings.json).
+
+```bash
+├── css
+│   ├── style.css
+│   └── style.css.map
+├── dist
+│   └── css
+│       ├── style.min.css
+│       └── style.min.css.map
+```
+
+Les fichiers .map permettent aux DevTools de navigateur (ceux que nous activons via "Inspecter Elément") de faire le lien entre le code étant exécuté et les fichiers sources originaux.
+
+Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navigateur va les chercher et trouver lui même grâce à
+
+```html
+<link rel="stylesheet" href="dist/css/style.min.css" />
+```
+
 ### Normalize
 
 Inclure normalize dans `scss/_normalize.scss`
