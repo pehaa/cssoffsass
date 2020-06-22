@@ -21,7 +21,7 @@ Nous allons profiter de faqs pour ceci - [_How to config the settings in my proj
 
 ## Partials
 
-**Nous allons apprendre** qu'on peut diviser stylesheet en petit morceaux, et comments les assembler ensemble.
+**Nous allons apprendre** qu'on peut diviser stylesheet en petit morceaux, et comments les assembler.
 
 Nous allons profiter de la simplicité des "partials". Notre code css va être diviser en plusieurs parties (partials) et assemblé dans style.scss.
 
@@ -88,7 +88,10 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 /*# sourceMappingURL=style.min.css.map */
 ```
 
+Exemple
+
 ```html
+<!-- html -->
 <link rel="stylesheet" href="dist/css/style.min.css" />
 ```
 
@@ -110,7 +113,7 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 **Nous allons apprendre** comment utiliser des variables sass.
 
-**TO DO 👉** Mettre en place tous les styles de base, qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
+**TO DO 👉** Mettre en place tous les styles de base, ceci dit des styles qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
 
 ** Exemple **
 
