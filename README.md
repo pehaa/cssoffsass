@@ -92,7 +92,7 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 <link rel="stylesheet" href="dist/css/style.min.css" />
 ```
 
-**Attention** Est-ce déjà clai que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichier .css. Nous n'y touchons plus.
+**Attention** Est-ce déjà clair que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichiers .css. Nous n'y touchons plus.
 
 **TO DO 👉** Lier le fichier `.css` compilé dans le fichier `index.html`
 
