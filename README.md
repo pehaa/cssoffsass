@@ -10,12 +10,27 @@
 ## To do Step by Step
 
 ### Configurer **Live Sass Compliler**
-Nous allons profiter de faqs pour ceci - [*How to config the settings in my project?*](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html)
+
+Nous allons profiter de faqs pour ceci - [_How to config the settings in my project?_](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html)
 
 ### Partials
 
 Nous allons profiter de la simplicité des "partials". Notre code css va être diviser en plusieurs parties (partials) et assemblé dans style.scss.
 
+```bash
+├── scss
+│   ├── _base.scss
+│   ├── _footer.scss
+│   ├── _form.scss
+│   ├── _functions.scss
+│   ├── _header.scss
+│   ├── _mixins.scss
+│   ├── _normalize.scss
+│   ├── _obstacles.scss
+│   ├── _prizes.scss
+│   ├── _settings.scss
+│   └── style.scss
+```
 
 Les fichiers "patials" qui sont uniquement destinés à être importés, et non compilés seuls, commencent par _. Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes. Vous pouvez laisser le _ lorsque vous importez un partiel.
 
