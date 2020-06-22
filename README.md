@@ -2,18 +2,54 @@
 
 ## Setup
 
-- IDE: Visual Studio Code
+- IDE: **Visual Studio Code**
 - nous allons installer et utiliser l'extension **Live Server**
 - nous allons installer et utiliser l'extention **Live Sass Compliler**
-- nous allons [configurer](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html) **Live Sass Compliler**
+- nous allons configurer **Live Sass Compliler**
+
+**Lien super utile** : [SassMeister - online compiler](https://www.sassmeister.com/)
 
 ## To do Step by Step
 
 ### Configurer **Live Sass Compliler**
 
-### Partials
+Nous allons profiter de faqs pour ceci - [_How to config the settings in my project?_](https://ritwickdey.github.io/vscode-live-sass-compiler/docs/faqs.html)
 
-Incluer les fichiers "partials" dans `style.scss` respectons l'ordre.
+**TO DO 👉** Configurer votre sass compiler
+
+---
+
+## Partials
+
+**Nous allons apprendre** qu'on peut diviser stylesheet en petit morceaux, et comments les assembler.
+
+Nous allons profiter de la simplicité des "partials". Notre code css va être diviser en plusieurs parties (partials) et assemblé dans style.scss.
+
+```bash
+├── scss
+│   ├── _base.scss
+│   ├── _footer.scss
+│   ├── _form.scss
+│   ├── _functions.scss
+│   ├── _header.scss
+│   ├── _mixins.scss
+│   ├── _normalize.scss
+│   ├── _obstacles.scss
+│   ├── _prizes.scss
+│   ├── _settings.scss
+│   └── style.scss
+```
+
+Les fichiers "patials" qui sont uniquement destinés à être importés, et non compilés seuls, commencent par "\_". Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes.
+
+Vous pouvez laisser le "\_" lorsque vous importez un partiel.
+
+```css
+// ex.
+@import "normalize";
+```
+
+**TO DO 👉** Inclure les fichier partials dans `style.scss` en respectons l'ordre comme ceci
 
 - normalize
 - settings
@@ -26,49 +62,239 @@ Incluer les fichiers "partials" dans `style.scss` respectons l'ordre.
 - form
 - footer
 
-```css
-// ex.
-@import "normalize";
+---
+
+## Output CSS
+
+Sass compiler (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans des fichiers .scss
+
+L'arborescence dépend de not réglages (fichier .vscode/settings.json).
+
+```bash
+├── css
+│   ├── style.css
+│   └── style.css.map
+├── dist
+│   └── css
+│       ├── style.min.css
+│       └── style.min.css.map
 ```
 
-**Nous allons apprendre** : qu'on peut diviser stylesheet en petit morceaux, et comments les assembler ensemble.
+Les fichiers .map permettent aux DevTools de navigateur (ceux que nous activons via "Inspecter Elément") de faire le lien entre le code étant exécuté et les fichiers sources originaux.
 
-### Output CSS
+Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navigateur va les chercher et trouver lui même grâce à la dernière ligne dans les fichier .css générés
 
-Lier le fichier `.css` compilé dans le fichier `index.html`
+```css
+/*# sourceMappingURL=style.min.css.map */
+```
 
-### Normalize
+Exemple
 
-Inclure normalize dans `scss/_normalize.scss`
+```html
+<!-- html -->
+<link rel="stylesheet" href="dist/css/style.min.css" />
+```
 
-**Nous allons apprendre** : on peut utiliser pur css dans un fichier .scss.
+**Attention** Est-ce déjà clair que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichiers .css. Nous n'y touchons plus.
 
-### Base
+**TO DO 👉** Lier le fichier `.css` compilé dans le fichier `index.html`
 
-Mettre en place tous les styles de base, qui concernent tout le document.
+---
 
-Utiliser les variables sass définiés dans `scss/_settings.scss`
+## Normalize
 
-**Nous allons apprendre** : utiliser des variables.
+**Nous allons apprendre** qu'on peut utiliser pur css dans un fichier .scss.
 
-### Functions
+**TO DO 👉** Inclure normalize dans `scss/_normalize.scss`
 
-Mettre en place une fonction qui convertit pixels en rems.
+---
 
-**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
+## Base
 
-### Header
+**Nous allons apprendre** comment utiliser des variables sass.
 
-Utiliser la fonction (built-in) `transparentize`
+**TO DO 👉** Mettre en place tous les styles de base, ceci dit des styles qui concernent tout le document. Utiliser les variables sass définiés dans `scss/_settings.scss`
 
-**Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
+** Exemple **
 
-### Obstacles
+```css
+/* scss */
+$brand-color: red;
+$base-spacing: 24px;
 
-Utiliser la technique de "nesting"
+h1 {
+  color: lighten($brand-color, 10%);
+  margin-bottom: $base-spacing;
+  padding: $base-spacing/2 $base-spacing/3;
+}
+```
 
-Créer un _mixin_ pour des grids d'obstacles
+est compilé vers :
 
-### Prizes
+```css
+/* css */
+h1 {
+  color: #ff3333;
+  margin-bottom: 24px;
+  padding: 12px 8px;
+}
+```
 
-Media queries dans sass
+---
+
+## Functions
+
+**Nous allons apprendre** comment nous faciliter la vie avec des fonctions.
+
+```css
+/* scss */
+@function function-name($parameter1, $parameter2) {
+  @return ....;
+}
+```
+
+**TO DO 👉** Mettre en place une fonction qui convertit pixels en rems.
+
+---
+
+## Header
+
+**Nous allons apprendre** comment nous faciliter la vie avec des fonctions se sass.
+
+Sass vient avec un nombre de fonctions déjà prédéfinies, y compris quelques fonctions qui permettent de modifier des couleurs.
+
+```css
+/* scss */
+nav {
+  background: mix(red, yellow);
+}
+
+header {
+  background: transparentize(red, 0.8);
+}
+```
+
+est compilé vers
+
+```css
+/* css */
+nav {
+  background: #ff8000;
+}
+header {
+  background: rgba(255, 0, 0, 0.2);
+}
+```
+
+**TO DO 👉** Utiliser la fonction (built-in) `transparentize`
+
+---
+
+## Obstacles
+
+**Nous allons apprendre** la syntaxe et fonctionnement de "nesting"
+
+Voici comment fonctionne nesting (regardez bien la disposition des accolades dans le code ci-dessous).
+
+Ce code en scss...
+
+```scss
+// .scss - ex.
+nav {
+  height: 3rem;
+  ul {
+    display: flex;
+  }
+  a {
+    color: red;
+    &:hover {
+      color: green;
+    }
+  }
+}
+```
+
+...donne ceci, une fois compilé :
+
+```css
+/* css */
+nav {
+  height: 3rem;
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  color: red;
+}
+nav a:hover {
+  color: green;
+}
+```
+
+**TO DO 👉** Utiliser la technique de "nesting"
+
+## Mixins
+
+**Nous allons apprendre** comment nous faciliter la vie en réutilisans css via @mixins.
+
+On peur imaginer mixins comme des snippets de css qu'on peut utiliser dans plusieurs endroits.
+
+La syntaxe est comme ceci :
+
+```css
+/* scss */
+@mixin mixin-name {
+  ....;
+}
+```
+
+exemple
+
+```scss
+/* scss */
+@mixin topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section {
+  position: relative;
+  .promo {
+    @include topleft;
+  }
+}
+```
+
+donne
+
+```css
+/* css */
+section {
+  position: relative;
+}
+section .promo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+```
+
+**TO DO 👉** Créer un _mixin_ pour des grids d'obstacles
+
+## Footer - Media queries dans sass
+
+**Nous allons apprendre** qu'avec sass on peut aussi ajouter des media queries par selecteur.
+
+```scss
+// .scss - ex.
+.container {
+  width: 80%;
+  @media (min-width: 40em) {
+    width: 50%;
+  }
+}
+```
+
+**TO DO 👉** Essayer vous-mêmes cette façon de mettre en place media queries.
