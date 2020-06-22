@@ -114,13 +114,37 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 
 ** Exemple **
 
+```css
+/* scss */
+$brand-color: red;
+$base-spacing: 24px;
+
+h1 {
+  color: lighten($brand-color, 10%);
+  margin-bottom: $base-spacing;
+  padding: $base-spacing/2 $base-spacing/3;
+}
+```
+
+est compilé vers :
+
+```css
+/* css */
+h1 {
+  color: #ff3333;
+  margin-bottom: 24px;
+  padding: 12px 8px;
+}
+```
+
 ---
 
 ### Functions
 
 **Nous allons apprendre** : comment nous faciliter la vie avec des fonctions.
 
-```scss
+```css
+/* scss */
 @function function-name($parameter1, $parameter2) {
   @return ....;
 }
@@ -133,6 +157,31 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 ### Header
 
 **Nous allons apprendre** : comment nous faciliter la vie avec des fonctions se sass.
+
+Sass vient avec un nombre de fonctions déjà prédéfinies, y compris quelques fonctions qui permettent de modifier des couleurs.
+
+```css
+/* scss */
+nav {
+  background: mix(red, yellow);
+}
+
+header {
+  background: transparentize(red, 0.8);
+}
+```
+
+est compilé vers
+
+```css
+/* css */
+nav {
+  background: #ff8000;
+}
+header {
+  background: rgba(255, 0, 0, 0.2);
+}
+```
 
 **TO DO 👉** Utiliser la fonction (built-in) `transparentize`
 
@@ -165,6 +214,7 @@ nav {
 ...donne ceci, une fois compilé :
 
 ```css
+/* css */
 nav {
   height: 3rem;
 }
@@ -181,9 +231,44 @@ nav a:hover {
 
 On peur imaginer mixins comme des snippets de css qu'on peut utiliser dans plusieurs endroits.
 
-```sass
-@mixin mixin-name($parameter1, $parameter2) {
-  ....
+La syntaxe est comme ceci :
+
+```css
+/* scss */
+@mixin mixin-name {
+  ....;
+}
+```
+
+exemple
+
+```scss
+/* scss */
+@mixin topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section {
+  position: relative;
+  .promo {
+    @include topleft;
+  }
+}
+```
+
+donne
+
+```css
+/* css */
+section {
+  position: relative;
+}
+section .promo {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 ```
 
