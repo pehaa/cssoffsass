@@ -25,12 +25,7 @@ body {
   background: var(--blue);
   color: #fff;
   font-family: Atma, sans-serif;
-  margin: 0;
-}
-
-h1,
-h2 {
-  margin-top: 0;
+  line-height: 1.5;
 }
 
 a {
@@ -46,19 +41,15 @@ ul {
 
 h1,
 h2 {
+  margin-top: 0;
   font-family: Bangers, sans-serif;
   letter-spacing: 2px;
 }
+
 h1,
 h2,
 h3 {
   text-align: center;
-}
-
-.wrap {
-  margin: auto;
-  max-width: 60rem;
-  width: calc(100% - 3rem);
 }
 
 h2 {
@@ -68,8 +59,8 @@ h2 {
 article h2 {
   font-size: 4rem;
 }
-article h2:after,
-article h1:after {
+
+article h2:after {
   content: "";
   height: 3rem;
   margin-top: 2rem;
@@ -96,6 +87,12 @@ article ul {
   margin-bottom: 6rem;
 }
 
+.wrap {
+  margin: auto;
+  max-width: 60rem;
+  width: calc(100% - 3rem);
+}
+
 /* ---- HEADER ---- */
 
 header {
@@ -115,6 +112,7 @@ h1 {
   letter-spacing: 2px;
   text-shadow: 1px 1px 0 white, 2px 2px 0 white;
   font-size: 10vmin;
+  line-height: 1.15;
 }
 
 header img {
@@ -156,6 +154,7 @@ nav li:nth-child(even) a:hover {
 .obstacles {
   background: var(--orange);
 }
+
 .obstacles ul {
   text-align: center;
   display: grid;
@@ -231,6 +230,7 @@ form {
   font-size: 1.5rem;
 }
 input {
+  display: block;
   font: inherit;
   width: 100%;
   padding: 1rem;
@@ -245,11 +245,13 @@ input:focus {
   background: var(--yellow);
   color: var(--orange);
 }
-::-webkit-input-placeholder {
+
+input::placeholder {
   color: #fff;
 }
-:-moz-placeholder {
-  color: #fff;
+
+input:focus::placeholder {
+  color: var(--orange);
 }
 
 button {
@@ -273,6 +275,7 @@ button:focus {
   transform: scale(1.5);
 }
 
+/* 480px+ */
 @media (min-width: 30em) {
   form {
     grid-template-columns: 1fr 1fr;
@@ -308,6 +311,7 @@ footer .wrap {
   display: grid;
 }
 
+/* 480px+ */
 @media (min-width: 30em) {
   footer .wrap {
     grid-template-columns: 1fr 1fr;
