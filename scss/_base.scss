@@ -24,6 +24,7 @@ body {
   background: $blue;
   color: $text-color;
   font-family: map-get($fonts, "body");
+  line-height: 1.5;
 }
 
 h1,
@@ -37,13 +38,6 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.wrap {
-  margin: auto;
-  max-width: calculate-rem(960px);
-  padding-left: calculate-rem(24px);
-  padding-right: calculate-rem(24px);
 }
 
 h2 {
@@ -63,11 +57,11 @@ article {
       height: $height;
       margin-top: 2rem;
       display: block;
-      background-image: linear-gradient(to right, $yellow 50%, transparent 50%),
-        linear-gradient(to right, $yellow 50%, transparent 50%);
+      background-image: linear-gradient(90deg, $yellow 50%, transparent 50%),
+        linear-gradient(270deg, $yellow 50%, transparent 50%);
       background-repeat: repeat-x;
       background-size: $height $height / 2;
-      background-position: left top, $height / 2 bottom;
+      background-position: left top, left bottom;
     }
   }
 }
@@ -78,4 +72,11 @@ footer {
   border-top: $border-height solid rgba(0, 0, 0, 0.06);
   border-bottom: $border-height solid rgba(0, 0, 0, 0.06);
   padding: calculate-rem(64px) 0;
+}
+
+.wrap {
+  margin: auto;
+  max-width: calculate-rem(960px);
+  padding-left: calculate-rem(24px);
+  padding-right: calculate-rem(24px);
 }
