@@ -109,6 +109,21 @@ Exemple
 
 ---
 
+## Functions
+
+**Nous allons apprendre** comment nous faciliter la vie avec des fonctions.
+
+```css
+/* scss */
+@function function-name($parameter1, $parameter2) {
+  @return ....;
+}
+```
+
+**TO DO 👉** Mettre en place une fonction qui convertit pixels en rems.
+
+---
+
 ## Base
 
 **Nous allons apprendre** comment utiliser des variables sass.
@@ -142,20 +157,6 @@ h1 {
 
 ---
 
-## Functions
-
-**Nous allons apprendre** comment nous faciliter la vie avec des fonctions.
-
-```css
-/* scss */
-@function function-name($parameter1, $parameter2) {
-  @return ....;
-}
-```
-
-**TO DO 👉** Mettre en place une fonction qui convertit pixels en rems.
-
----
 
 ## Header
 
