@@ -69,7 +69,7 @@ article h2:after {
     linear-gradient(270deg, var(--yellow) 50%, transparent 50%);
   background-repeat: repeat-x;
   background-size: 3rem 1.5rem;
-  background-position: left top, 1.5rem bottom;
+  background-position: left top, left bottom;
 }
 
 article,
