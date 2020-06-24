@@ -242,8 +242,32 @@ input:focus {
   color: var(--orange);
 }
 
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+}
+
+input::-ms-input-placeholder {
+  color: #fff;
+}
+
 input::placeholder {
   color: #fff;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus:-ms-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus::-ms-input-placeholder {
+  color: var(--orange);
 }
 
 input:focus::placeholder {

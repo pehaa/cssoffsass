@@ -18,11 +18,12 @@ input {
   }
 }
 
-::-webkit-input-placeholder {
+input::placeholder {
   color: #fff;
 }
-:-moz-placeholder {
-  color: #fff;
+
+input:focus::placeholder {
+  color: var(--orange);
 }
 
 button {
