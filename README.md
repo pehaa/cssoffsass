@@ -199,7 +199,7 @@ Voici comment fonctionne nesting (regardez bien la disposition des accolades dan
 Ce code en scss...
 
 ```scss
-// .scss - ex.
+// .scss
 nav {
   height: 3rem;
   ul {
@@ -232,6 +232,38 @@ nav a:hover {
 }
 ```
 
+Le symbole "&" peut être aussi utilisé comme ceci :
+
+```scss
+// .scss
+.btn {
+  &-small {
+    padding: 0.5rem;
+  }
+  &-medium {
+    padding: 1rem;
+  }
+  &-large {
+    padding: 2rem;
+  }
+}
+```
+
+qui est compilé vers :
+
+```css
+/* .css */
+.btn-small {
+  padding: 0.5rem;
+}
+.btn-medium {
+  padding: 1rem;
+}
+.btn-large {
+  padding: 2rem;
+}
+```
+
 **TO DO 👉** Utiliser la technique de "nesting"
 
 ## Mixins
@@ -245,7 +277,8 @@ La syntaxe est comme ceci :
 ```css
 /* scss */
 @mixin mixin-name {
-  ....;
+  property1: value1;
+  property2: value2;
 }
 ```
 
