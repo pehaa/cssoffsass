@@ -69,7 +69,7 @@ article h2:after {
     linear-gradient(270deg, var(--yellow) 50%, transparent 50%);
   background-repeat: repeat-x;
   background-size: 3rem 1.5rem;
-  background-position: left top, left bottom;
+  background-position: left top, 1.5rem bottom;
 }
 
 article,
@@ -242,8 +242,32 @@ input:focus {
   color: var(--orange);
 }
 
+input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+input:-ms-input-placeholder {
+  color: #fff;
+}
+
+input::-ms-input-placeholder {
+  color: #fff;
+}
+
 input::placeholder {
   color: #fff;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus:-ms-input-placeholder {
+  color: var(--orange);
+}
+
+input:focus::-ms-input-placeholder {
+  color: var(--orange);
 }
 
 input:focus::placeholder {
