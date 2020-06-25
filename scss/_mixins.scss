@@ -1,0 +1,5 @@
+@mixin responsive-grid($gap, $min-width) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, 1fr));
+}

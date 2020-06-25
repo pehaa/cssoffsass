@@ -1,0 +1,54 @@
+header {
+  min-height: 100vh;
+  background-image: url("../../img/blue-splash.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: $orange;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0 white, 2px 2px 0 white;
+  font-size: 10vmin;
+  line-height: 1.15;
+}
+
+header img {
+  display: inline-block;
+  margin: 6rem 0 3rem;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparentize($green, 0.2);
+  z-index: 2;
+}
+nav ul {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-around;
+}
+
+nav a {
+  text-decoration: none;
+  display: inline-block;
+  color: inherit;
+  padding: 1rem 0.5rem;
+  transition: transform 0.6s;
+}
+
+$rotate: 5deg;
+nav li:nth-child(odd) a:hover {
+  transform: scale(1.5) rotate($rotate);
+}
+
+nav li:nth-child(even) a:hover {
+  transform: scale(1.5) rotate(-$rotate);
+}

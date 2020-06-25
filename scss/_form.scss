@@ -1,1 +1,59 @@
+form {
+  display: grid;
+  font-size: 1.5rem;
+}
+input {
+  display: block;
+  font: inherit;
+  width: 100%;
+  padding: 1rem;
+  background: $orange;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  &:focus {
+    background: $yellow;
+    color: $orange;
+  }
+}
 
+input::placeholder {
+  color: #fff;
+}
+
+input:focus::placeholder {
+  color: $orange;
+}
+
+button {
+  font-family: Bangers, sans-serif;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  text-shadow: 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 10rem;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+  background: url("../../img/submit_bg.png") no-repeat center center;
+  background-size: contain;
+  text-align: center;
+  color: #fff;
+  transform: rotate(-8deg);
+  transition: 0.6s;
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
+}
+
+/* 480px+ */
+@media (min-width: 30em) {
+  form {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+  }
+  button {
+    grid-column: 1 / span 2;
+  }
+}

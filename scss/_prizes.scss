@@ -1,0 +1,27 @@
+.prizes {
+  background: $green;
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 2px dashed $yellow;
+    &:hover img {
+      transform: rotate(360deg);
+      transition: 1s;
+    }
+    img {
+      display: inline-block;
+      transition: 0.3s;
+    }
+  }
+}
+
+@media (min-width: calculate-em(480px)) {
+  .prizes ul {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

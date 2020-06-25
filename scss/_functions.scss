@@ -1,0 +1,8 @@
+@function calculate-rem($valuePx) {
+  @return $valuePx / 16px * 1rem;
+}
+
+// a utiliser pour media queries
+@function calculate-em($valuePx) {
+  @return $valuePx / 16px * 1em;
+}
