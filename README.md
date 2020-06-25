@@ -161,7 +161,7 @@ h1 {
 
 ## Header
 
-**Nous allons apprendre** comment nous faciliter la vie avec des fonctions se sass.
+**Nous allons apprendre** comment nous faciliter la vie avec des fonctions de sass.
 
 Sass vient avec un nombre de fonctions déjà prédéfinies, y compris quelques fonctions qui permettent de modifier des couleurs.
 
