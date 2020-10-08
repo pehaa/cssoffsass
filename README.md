@@ -277,9 +277,9 @@ qui est compilé vers :
 
 ## Mixins
 
-**Nous allons apprendre** comment nous faciliter la vie en réutilisans css via @mixins.
+**Nous allons apprendre** comment nous faciliter la vie en réutilisans css via `@mixins`.
 
-On peur imaginer mixins comme des snippets de css qu'on peut utiliser dans plusieurs endroits.
+On peur imaginer que *mixin* est un snippet de css qu'on peut utiliser dans plusieurs endroits pour ne pas se répéter.
 
 La syntaxe est comme ceci :
 
