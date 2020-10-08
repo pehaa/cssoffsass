@@ -56,7 +56,7 @@ et la façon plus concise de dire :
 @import "_normalize.scss";
 ```
 
-**TO DO 👉** Inclure les fichier partials dans `style.scss` en respectons l'ordre comme ceci
+**TO DO 👉** Inclure les fichier partials dans `style.scss` en respectant l'ordre comme ceci
 
 - normalize
 - settings
