@@ -73,9 +73,9 @@ et la façon plus concise de dire :
 
 ## Output CSS
 
-Sass compiler (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans des fichiers .scss
+Le compilateur Sass (l'extension Live Sass Compiler dans notre cas) crée ou met à jours des fichiers css à chaque fois où nous enregistrons une modification dans un des fichiers `.scss`
 
-L'arborescence dépend de not réglages (fichier .vscode/settings.json).
+L'arborescence où seront placés les fichiers générés dépend de not réglages (fichier `.vscode/settings.json`).
 
 ```bash
 ├── css
@@ -87,7 +87,7 @@ L'arborescence dépend de not réglages (fichier .vscode/settings.json).
 │       └── style.min.css.map
 ```
 
-Les fichiers .map permettent aux DevTools de navigateur (ceux que nous activons via "Inspecter Elément") de faire le lien entre le code étant exécuté et les fichiers sources originaux.
+Les fichiers `.map` permettent aux DevTools de navigateur de faire le lien entre le code étant exécuté et les fichiers sources originaux.
 
 Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navigateur va les chercher et trouver lui même grâce à la dernière ligne dans les fichier .css générés
 
@@ -95,14 +95,12 @@ Nous ne les incluons pas, mais il ne faut pas les supprimer pour autant. Le navi
 /*# sourceMappingURL=style.min.css.map */
 ```
 
-Exemple
-
 ```html
 <!-- html -->
 <link rel="stylesheet" href="dist/css/style.min.css" />
 ```
 
-**Attention** Est-ce déjà clair que nous ne modifions pas de fichiers .css manuellement ? Si nous utilisons sass dans le projet, c'est sass qui se charge de la génération des fichiers .css. Nous n'y touchons plus.
+**Attention** Est-ce déjà clair que nous ne modifions pas de fichiers `.css` manuellement ? Si nous utilisons Sass dans le projet, c'est Sass qui se charge de la génération des fichiers `.css.` **Nous n'y touchons plus. ⛔️**
 
 **TO DO 👉** Lier le fichier `.css` compilé dans le fichier `index.html`
 
