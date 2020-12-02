@@ -40,19 +40,17 @@ Nous allons profiter de la simplicité des "partials". Notre code css va être d
 │   └── style.scss
 ```
 
-Les fichiers "patials"  commencent par "\_". Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes.
+Les fichiers "patials"  commencent par "\_" (*underscore*, tiret bas). Ceci indique aux outils Sass de ne pas essayer de compiler ces fichiers par eux-mêmes.
 
-Vous pouvez laisser le "\_" lorsque vous importez un partiel.
+Vous pouvez ommettre le "\_" lorsque vous importez un partiel :
 
 ```css
-// ex.
 @import "normalize";
 ```
 
 et la façon plus concise de dire :
 
 ```css
-// ex.
 @import "_normalize.scss";
 ```
 
